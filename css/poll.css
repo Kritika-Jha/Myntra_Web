@@ -1,0 +1,196 @@
+/* Universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* Poll Form Styles */
+.poll-form {
+    margin: 20px auto; /* Center horizontally with top and bottom margin */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Set width to 60% of the viewport */
+    max-width: 1000px; /* Optional: set a maximum width to maintain readability */
+}
+
+.poll-form input[type="text"], 
+.poll-form button {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.poll-form input[type="url"]:focus {
+    outline: none;
+    border-color: #84001f; /* Light blue focus color */
+}
+
+.poll-form button {
+    background-color: #fb6e8f;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.poll-form button:hover {
+    background-color: #fd547b; /* Darker blue on hover */
+}
+
+.option-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option-input img {
+    width: 100%; /* Ensure image takes up 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Increase maximum width of image */
+    max-height: 200px; /* Increase maximum height of image */
+    display: block;
+    margin-top: 10px; /* Adjust margin as needed */
+}
+
+.option-url {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.option-image {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.option-image:hover {
+    opacity: 0.8;
+}
+
+/* Adjusted image size for poll form */
+.poll-form img {
+    max-width: 400px; /* Increase max width of images */
+    max-height: 400px; /* Increase max height of images */
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+/* Styling for Add Option and Create Poll buttons */
+.poll-form button:first-of-type {
+    margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .poll-form {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .poll-form {
+        padding: 15px;
+    }
+    .poll-form button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+/* Additional styling for Poll Results Display */
+.poll {
+    margin: 20px auto; /* Center horizontally with top and bottom margin */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Set width to 60% of the viewport */
+    max-width: 1000px; /* Optional: set a maximum width to maintain readability */
+}
+
+.poll .question {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.poll .answers .answer {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.poll .answers .answer.selected {
+    background-color: #f4adbc; /* Light blue background for selected answer */
+    border-color: #cd0030;
+    color: #000000;
+}
+
+.poll .answers .answer:hover {
+    border-width: 2px;
+    border-color: #fd537b; /* Light gray background on hover */
+}
+
+.poll .answers .answer img {
+    max-width: 400px; /* Increase max width of images */
+    max-height: 400px; /* Increase max height of images */
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.poll .answers .answer .percentage-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #8f9fe8; /* Light blue percentage bar */
+    z-index: -1;
+    transition: width 300ms ease-in-out;
+}
+
+.poll .answers .answer .percentage-value {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #333333;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .poll,
+    .poll-form {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .poll,
+    .poll-form {
+        margin: 5px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/poll.css">
+    <link rel="icon" type="image/x-icon" href="images/myntra_logo.webp">
+    <script src="scripts/poll.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Poll</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo_container">
+            <a href="index.html"><img class="myntra_home" src="images/myntra_logo.webp" alt="Myntra Home"></a>
+        </div>
+        <nav class="nav_bar">
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Home & Living</a>
+            <a href="#">Beauty</a>
+            <a href="#">Studio <sup>New</sup></a>
+        </nav>
+        <div class="search_bar">
+            <span class="material-symbols-outlined search_icon">search</span>
+            <input class="search_input" placeholder="Search for products, brands and more">
+        </div>
+        <div class="action_bar">
+            <div class="action_container">
+                <span class="material-symbols-outlined action_icon">person</span>
+                <span class="action_name">Profile</span>
+            </div>
+
+            <div class="action_container">
+                <span class="material-symbols-outlined action_icon">favorite</span>
+                <span class="action_name">Wishlist</span>
+            </div>
+
+            <a class="action_container" href="pages/bag.html">
+                <span class="material-symbols-outlined action_icon">shopping_bag</span>
+                <span class="action_name">Bag</span>
+                <span class="bag-item-count">0</span>
+            </a>
+
+            <a class="action_container" href="poll.html">
+                <span class="material-symbols-outlined action_icon">poll</span>
+                <span class="action_name"><u style="color: #f16565;">Poll</u></span>
+            </a>
+        </div>
+
+
+    </header>
+
+    <!-- Poll Form -->
+    <div class="poll-form">
+        <input type="text" id="question-input" placeholder="Enter your question" required />
+        <div id="options-container">
+            <div class="option-input">
+                <input type="url" placeholder="Product Link 1" class="option-url" required />
+                <input type="file" accept="image/*" class="option-image" onchange="previewImage(this, 1)" required>
+                <img id="preview-image-1" src="#" alt="Preview" style="display:none;max-width:100px;max-height:100px;">
+            </div>
+            <div class="option-input">
+                <input type="url" placeholder="Product Link 2" class="option-url" required />
+                <input type="file" accept="image/*" class="option-image" onchange="previewImage(this, 2)" required>
+                <img id="preview-image-2" src="#" alt="Preview" style="display:none;max-width:100px;max-height:100px;">
+            </div>
+        </div>
+        <button onclick="addOption()">Add Option</button>
+        <button onclick="createPoll()">Create Poll</button>
+    </div>
+
+    <!-- Poll Display -->
+    <div class="poll" style="display: none;">
+        <div class="question"></div>
+        <div class="answers"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_container">
+            <div class="footer_column">
+                <h3>ONLINE SHOPPING</h3>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+                <a href="#">Beauty</a>
+                <a href="#">Gift Card</a>
+                <a href="#">Myntra Insider</a>
+            </div>
+
+            <div class="footer_column">
+                <h3>HELP</h3>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Order & Return</a>
+                <a href="#">Shipping</a>
+                <a href="#">Track Order</a>
+                <a href="#">Cancellation</a>
+                <a href="#">Returns</a>
+            </div>
+
+            <div class="footer_column">
+                <h3>KEEP IN TOUCH</h3>
+                <div>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            &copy; 2024 www.myntra.com. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>
